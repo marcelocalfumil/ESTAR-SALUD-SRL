@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/icons8-facebook-48.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/icons8-instagram-48.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/icons8-linkedin-48.png" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 <style>
   /* Reset and base */
   * {
@@ -15,9 +16,9 @@
     padding: 0;
   }
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff;
-    color: #333;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1c1c1c;
+    color: #eee;
     line-height: 1.6;
   }
   a {
@@ -54,10 +55,14 @@
   nav .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-left: 20px;
   }
   nav .logo img {
-    height: 50px;
-    margin-right: 0.5rem;
+    height: 120px;
+    margin-right: 0;
+    width: auto;
+    max-width: none;
   }
   nav ul {
     list-style: none;
@@ -174,6 +179,7 @@
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    color: #333;
   }
   .service-item:hover {
     transform: translateY(-8px);
@@ -186,6 +192,7 @@
   /* Contacto */
   .contact {
     animation: fadeIn 2s ease forwards;
+    color: #333;
   }
   .contact form {
     max-width: 600px;
@@ -221,7 +228,10 @@
     margin: 0 auto;
     text-align: center;
     font-size: 1rem;
-    color: var(--gray-dark);
+    color: #eee;
+  }
+  .contact-value {
+    color: #eee;
   }
   .contact-info p {
     margin: 0.5rem 0;
@@ -231,13 +241,15 @@
     background: var(--blue);
     color: var(--white);
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 0.9rem;
     position: relative;
   }
   footer .footer-logo {
-    height: 30px;
+    height: 90px;
     margin-bottom: 0.5rem;
+    width: auto;
+    max-width: none;
   }
   footer .socials {
     margin-bottom: 0.5rem;
@@ -402,7 +414,7 @@
 <body>
 <nav>
   <div class="logo">
-    <img src="LOGO ESTAR SALUD SRL.jpg" alt="Estar Salud SRL Logo" />
+    <img src="LOGO ESTAR2.jpeg" alt="Estar Salud SRL Logo" />
     
   </div>
   <span class="menu-toggle" onclick="toggleMenu()">☰</span>
@@ -412,7 +424,7 @@
       <a href="#services">Servicios ▼</a>
       <ul class="dropdown">
         <li><a href="#cobertura-eventos">Cobertura en Eventos</a></li>
-        <li><a href="#traslado">Traslado Programado y Urgente</a></li>
+        <li><a href="#traslado">Traslado Programados</a></li>
         <li><a href="#cobertura-industrias">Cobertura en Industrias</a></li>
       </ul>
     </li>
@@ -430,6 +442,7 @@
     <h2 id="about-title">Sobre Nosotros</h2>
     <p><strong>Misión:</strong> Brindar atención médica de calidad, rápida y confiable en eventos, traslados y sectores industriales, priorizando la salud y seguridad de nuestros clientes.</p>
     <p><strong>Visión:</strong> Ser la empresa líder en servicios de ambulancia, reconocida por su profesionalismo, innovación y compromiso social.</p>
+    <p><strong>Valores:</strong> Nacimos en territorio patagonico y llevamos con fuerza nuestra identidad. Cada avance habla de lo que somos: seriedad, esfuerzo y mision a largo plazo.</p>
   </div>
   <div class="image">
     <img src="1753473274214.jpeg" alt="Equipo de ambulancia en acción" />
@@ -438,6 +451,20 @@
 
 <section class="services" id="services" aria-labelledby="services-title">
   <h2 id="services-title">Servicios</h2>
+  <p>En Estar Salud S.R.L., ofrecemos soluciones de traslado y asistencia médica adaptadas a cada necesidad, con un enfoque humano, seguro y altamente profesional.</p>
+  <p>Nuestros servicios incluyen:</p>
+  <ul>
+    <li>Traslados programados, para pacientes que requieren asistencia médica especializada.</li>
+    <li>Cobertura de eventos deportivos, culturales y sociales, con equipos capacitados en atención inmediata.</li>
+    <li>Asistencia en industrias de alto riesgo como gas, petróleo, minería y fábricas, garantizando presencia médica en zonas operativas.</li>
+    <li>Alquiler de ambulancias para instituciones públicas y privadas, con opciones flexibles de cobertura y duración.</li>
+  </ul>
+  <p>Configuración de equipos:</p>
+  <ul>
+    <li>Ambulancias totalmente equipadas, con opción de personal médico, chofer y enfermero.</li>
+    <li>Alternativas operativas con chofer y enfermero, adaptadas según el tipo de traslado o cobertura.</li>
+  </ul>
+  <p>Nos respaldan años de experiencia en el sector salud y un compromiso firme con la protección, la calidad y la eficiencia. Cada traslado, cada evento, cada industria: estamos preparados para cuidar.</p>
   <article class="service-item" id="cobertura-eventos" aria-label="Cobertura médica en eventos">
     <div class="service-icon" aria-hidden="true">🏥</div>
     <h3>Cobertura médica en eventos</h3>
@@ -445,8 +472,8 @@
   </article>
   <article class="service-item" id="traslado" aria-label="Servicios de traslado programado y urgente">
     <div class="service-icon" aria-hidden="true">🚑</div>
-    <h3>Traslado programado y urgente</h3>
-    <p>Servicios de traslado médico planificado y emergencias con personal capacitado y equipamiento moderno.</p>
+    <h3>Traslado programado</h3>
+    <p>Servicios de traslado médico planificado con personal capacitado y equipamiento moderno.</p>
   </article>
   <article class="service-item" id="cobertura-industrias" aria-label="Cobertura médica en industrias">
     <div class="service-icon" aria-hidden="true">🏭</div>
@@ -464,13 +491,13 @@
     <button type="submit">Enviar</button>
   </form>
     <div class="contact-info" aria-label="Datos de contacto">
-      <p>Teléfono: <a href="https://wa.me/5492995271560" target="_blank" rel="noopener" class="whatsapp-link">+54 2995271560</a></p>
-      <p>Email: contacto@estarsalud.com</p>
-      <p>Dirección: Av. Salud 123, Ciudad</p>
+      <p>Teléfono: <span class="contact-value"><a href="https://wa.me/5492995271560" target="_blank" rel="noopener" class="whatsapp-link">+54 2995271560</a></span></p>
+      <p>Email: <span class="contact-value">contacto@estarsalud.com</span></p>
+      <p>Dirección: <span class="contact-value">Parque oeste, Cutral Co-Neuquen</span></p>
     </div>
   <div style="max-width: 600px; margin: 1rem auto;">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.1234567890123!2d-58.381592!3d-34.603722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb1234567%3A0x123456789abcdef!2sAv.%20Salud%20123%2C%20Ciudad!5e0!3m2!1ses!2sar!4v1690339200000!5m2!1ses!2sar"
+  <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3340.9279279279277!2d-69.2520005!3d-38.9410001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614a1a1a1a1a1a1%3A0x123456789abcdef!2sParque%20Oeste%2C%20Cutral%20Co%2C%20Neuqu%C3%A9n%2C%20Argentina!5e0!3m2!1ses!2sar!4v1690345600000!5m2!1ses!2sar"
       width="100%"
       height="300"
       style="border:0;"
@@ -483,7 +510,7 @@
 </section>
 
 <footer>
-  <img src="LOGO ESTAR SALUD SRL.jpg" alt="Estar Salud SRL Logo" class="footer-logo" />
+  <img src="LOGO ESTAR2.jpeg" alt="Estar Salud SRL Logo" class="footer-logo" />
   <div class="socials" aria-label="Redes sociales">
     <a href="https://facebook.com/estarsalud" target="_blank" rel="noopener" aria-label="Facebook">
       <img src="favicon/icons8-facebook-48.png" alt="Facebook" style="width:32px; height:32px;" />
